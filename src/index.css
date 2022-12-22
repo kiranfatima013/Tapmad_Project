@@ -1,13 +1,456 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+:root{
+ --green-700: #040f09;
+ --num: 8;
+}
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #040f09;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  /* color: rgb(0, 0, 0); */
+  margin: 0;
+  padding: 0;
 }
+
+/* swiper setting */
+.swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.swiper-slide{
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  margin-top: 2rem;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  transition-delay: 0s; 
+  cursor: pointer;
+}
+
+/* .swiper-slide img:hover {
+z-index: 9999;
+} */
+
+.swiper-button-next{
+background-color: #3ec778;
+height: 50px;
+width: 50px;
+border-radius: 50%;
+}
+
+.swiper-button-next::after{
+font-size: 30px;
+color: white;
+justify-content: center;
+border-width: 2px 2px 0 0;
+transform-origin: center;
+}
+
+.swiper-button-prev{
+ background-color: #3ec778;
+height: 50px;
+width: 50px;
+border-radius: 50%; 
+}
+
+.swiper-button-prev::after{
+font-size: 30px;
+color: white;
+justify-content: center;
+border-width: 2px 2px 0 0;
+transform-origin: center;
+}
+
+/* header/nav setting */
+ h1{
+  color: white;
+  font-size: 1.7em;
+}
+
+.main{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #040f09;
+}
+ .header .login {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  font-size: 17.6px; 
+  padding-block: 1.42rem 1.11rem;
+ }
+ .headerSetting{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 2rem;
+  gap: 2rem;
+  justify-content: space-between;
+ }
+ .logoSetting{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 2rem;
+  gap: 1rem;
+  padding-block: 1.42rem 1.11rem;
+ }
+ .bars{
+    z-index: 1000;
+ }
+ .close{
+  line-height: 100px;
+ }
+ .close-btn{
+  background-color: red;
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+ }
+.header{
+  background-color:hsla(0,0%,100%,.9);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-weight: 500;
+  z-index: 9;
+  color: #000;
+  align-items: center;
+}
+.padding{
+  padding-inline: 1rem;
+}
+ .header img{
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  justify-content:center; 
+  align-items: center;
+  
+ }
+
+ .header .navLinks{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+ }
+
+  nav .link{
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  align-items: center;
+  padding-block: 1.42rem 1.11rem;
+  border-bottom: 5px solid transparent;
+  transition-duration:.25s; 
+  font-size: 17.6px; 
+ }
+
+  .active{
+    border-bottom: 5px solid #37C673;
+    color: #37C673;
+    text-decoration: none;
+    font-weight: 500;
+    align-items: center;
+    padding-block: 1.42rem 1.11rem;
+    font-size: 17.6px; 
+  }
+  
+  nav .link:hover,
+  nav .active:hover{
+    color: #37C673;
+  }
+    nav .link:focus{
+     color: #37C673;
+     border-bottom-color: #37C673;
+     /* width: fit-content; */
+    
+    }
+/* remaining css */
+
+ .description{
+  margin-top: 8rem;
+  flex: 1;
+  padding-left: 32px;
+}
+.description p{
+  font-size: 1rem;
+  color: #757776;
+  max-width: 100%;
+ }
+ .description h1{
+  font-size: 2.5rem;
+  color: #fff;
+ }
+.btn-Watch{
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 15px 20px;
+  width: 10rem;
+  background: linear-gradient(90deg,#3ec778,#109f69);
+}
+ .Featured{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+ }
+ .sections{
+  padding-top: 1rem;
+ }
+ .sections h1{
+  font-size: 30px;
+  margin-bottom: -30px; 
+  font-weight: 500;
+ }
+
+.col{
+  justify-content: center;
+  display: grid;
+  padding-top: 1.5rem;
+}
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+.imageSetting{
+  position:relative;
+}
+.imageSetting::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    content: "";
+    background-image: linear-gradient(90deg,var(--green-700) 5%,transparent);
+}
+.imageSetting img{
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 30rem;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    pointer-events:all;
+}
+.bgImage{
+  height: calc(100vh - 16.5rem);
+  min-height: 40rem;
+  margin-bottom: 0;
+}
+.bgSetting img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    pointer-events: none;
+    vertical-align: middle;
+}
+.bgSetting{
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+}
+.bgSetting::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30rem;
+  background-image: linear-gradient(transparent,#040f09);
+}
+.Home_Button{
+  position: absolute!important;
+  left: 0;
+  right: 0;
+  width: 13rem;
+  margin-inline: auto;
+  border: none;
+  outline: none;
+  margin-top: 35rem;
+  line-height: 33px;
+}
+.Home_Button:hover,
+.btn-Watch .Home_Button:focus{
+ border: none;
+ outline: none;
+}
+
+.Home_Button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: .3s ease-in-out;
+    background: transparent;
+
+}
+.videoSetting{
+  margin: 40px auto;
+  width: 1100px;
+  align-items: center;
+  padding:20px;
+}
+.videoSection{
+  display: grid;
+  justify-content: center;
+
+}.footer{
+    background-color: #131c1f;
+ }
+ .footer h2{
+ color: white;
+ font-size: 24px;
+ font-weight: 500;
+ }
+.rec{
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: 1rem;
+  column-gap: 2rem;
+}
+ .recommended{
+  color: #37C673;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  bottom: -0.65rem;
+  margin-bottom: 10px;
+ }
+  .rec div[role=button].recommended{
+  border-bottom-color: #37C673;
+ }
+ .rec::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,.5),transparent 47%);
+ }
+  .relatedImages{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    margin-top: 0.2rem;
+    align-items: flex-start;
+  }
+
+  .calculation{
+    --valueW: calc((100% / var(--num)) - 4.5px);
+    --ValueH: 18.18rem;
+  }
+  .videoLink{
+    height: auto!important;
+    width: var(--valueW);
+    position: relative;
+    display: block;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform .25s linear;
+    will-change: transform;
+  }
+  .videoLink img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .videoLink:hover{
+    z-index: 99;
+  }
+
+  @media (min-width: 992px)
+  {
+  .videoLink:hover {
+      transform: scale(1.3);
+  }
+  }
+  
+@media (max-width: 992px) {
+  .navLinks{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(4,15,9,.97);
+    display: flex;
+    flex-direction: column;
+    line-height: 10px;
+    text-align: center;
+    padding: 13rem 0;
+    
+  } 
+  nav .link{
+    color: white;
+    padding-block: 0 0.5rem;
+    border-bottom-width: 3px;
+  }
+  .header nav.open{
+    left: 0%;
+  }
+}
+
+
+
+
+
+  ::-webkit-scrollbar{
+  width: 8px;
+  background-color: #040f09;
+  /* color: white; */
+ }
+ ::-webkit-scrollbar-track{
+  border-radius: 10px;
+ }
+ ::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:#66d294 ;
+ }
